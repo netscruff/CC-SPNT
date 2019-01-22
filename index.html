@@ -52,6 +52,7 @@
 					<p>Puppet managed replicas</p>
 					<p>Application of ACLs</p>
 					<p>TLS/SSL Certificate</p>
+					<p>Schema Updates</p>
 					<aside class="notes">
 						Work done by Infrastructure Operations national team. Defunded clusters mostly using national LDAP now.
 					</aside>
@@ -62,8 +63,11 @@
 						<p>Dockerized deployment of IdP</p>
 						<p>Registration with CAF and EduGain</p>
 						<p>Only staff accounts are allowed for federated SP login</p>
+						<p>Support for R&amp;S Entity Category in CAF and EduGain</p>
+						<p>Looking at adding Sirtfi</p>
 						<aside class="notes">
-							Using context check for determining which account are staff
+							Using context check for determining which account are staff. We have performed some steps required for
+							the self evaluation in preparation for Sirtfi like updating our metadata with appropriate contact information.
 						</aside>
 					</section>
 					<section>
@@ -86,13 +90,23 @@
 					</section>
 				</section>
 				<section>
+					<h3>OpenID Connect</h3>
+					<p>Identity layer on top of the OAuth 2.0 protocol</p>
+					<p>Puppet deployed MITREid single instance running</p>
+					<p>Will likely switch to using Shibboleth OIDC when support is incorporated</p>
+					<p>Only in use for Kubernetes</p>
+					<aside class="notes">
+						CSCfi Finnish IT Center for Science is working on the Shib extension.
+					</aside>
+				</section>
+				<section>
 					<h3>Grouper</h3>
 					<p>Access management system</p>
 					<p>Manage groups, roles and permissions</p>
 					<p>Provision to LDAP, SCIM, G Suite and more
 					<p>Test deployments using LDAP and CCDB directly for subject source</p>
 					<aside class="notes">
-						Multi-tenancy and the potential to use Federated identities.
+						Multi-tenancy and the potential to use Federated identities. Fine grained permissions.
 					</aside>
 				</section>
 			</div>
@@ -126,7 +140,7 @@
 			});
 
 		</script>
-		<a class="fork-reveal" style="display: none;" href="https://github.com/hakimel/reveal.js"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://gist.githubusercontent.com/netscruff/96553c5dc5040187ab859726e852cfe2/raw/905b1bba757a9f1766644a8e3296e73125c57e77/cc_logo.png" alt="Compute Canada Logo"></a>
+		<a class="fork-reveal" style="display: none;" href="https://computecanada.ca/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://gist.githubusercontent.com/netscruff/96553c5dc5040187ab859726e852cfe2/raw/905b1bba757a9f1766644a8e3296e73125c57e77/cc_logo.png" alt="Compute Canada Logo"></a>
 		<script>
 			if( !navigator.userAgent.match( /(iphone|android)/gi ) && !!document.querySelector ) {
 				document.querySelector( '.fork-reveal' ).style.display = 'block';
