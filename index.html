@@ -49,10 +49,11 @@
 				</section>
 				<section>
 					<h3>LDAP</h3>
-					<p>Puppet managed replicas</p>
+					<p>Puppet managed OpenLDAP replicas</p>
 					<p>Application of ACLs</p>
 					<p>TLS/SSL Certificate</p>
 					<p>Schema Updates</p>
+					<p>Pseudo Users and Platform Nodes</p>
 					<aside class="notes">
 						Work done by Infrastructure Operations national team. Defunded clusters mostly using national LDAP now.
 					</aside>
@@ -60,9 +61,9 @@
 				<section>
 					<section>
 						<h3>SAML IdP</h3>
-						<p>Dockerized deployment of IdP</p>
-						<p>Registration with CAF and EduGain</p>
-						<p>Only staff accounts are allowed for federated SP login</p>
+						<p>Dockerized deployment of Shibboleth IdP</p>
+						<p>Federation with CAF and EduGain</p>
+						<p>Only staff accounts are allowed for federated SP logins</p>
 						<p>Support for R&amp;S Entity Category in CAF and EduGain</p>
 						<p>Looking at adding Sirtfi</p>
 						<aside class="notes">
@@ -73,6 +74,8 @@
 					<section>
 						<h3>Kubernetes deployment</h3>
 						<p>IdP deployment for production and test</p>
+						<p>Configuration clone from git on deploy</p>
+						<p>Test Service Provider deployments</p>
 						<p>Using replicas and rolling upgrades</p>
 						<aside class="notes">
 							K8s deployed in OpenStack. Managing certificates and passwords in secrets, configuration in configsets and git repos.
@@ -107,6 +110,9 @@
 					<aside class="notes">
 						Multi-tenancy and the potential to use Federated identities. Fine grained permissions.
 					</aside>
+				</section>
+				<section>
+					<h2>Discussion</h2>
 				</section>
 			</div>
 
